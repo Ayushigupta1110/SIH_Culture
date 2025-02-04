@@ -1,0 +1,718 @@
+@font-face {
+    font-family: PP mori;
+    src: url(./ppmori-regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PP mori;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.text-gradient {
+    background: linear-gradient(to right, #FF9933, #138808);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.text-gradient2 {
+    background: linear-gradient(to right, #FF9933, #FFB84D, #FFFFFF, #138808);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+
+
+.background-gradient {
+    background: linear-gradient(135deg, #E57373, #F06292, #BA68C8, #64B5F6, #4DB6AC);
+    padding: 10px; /* Add some padding for aesthetics */
+    border-radius: 50px; /* Capsule-like border */
+    text-align: center; /* Center text within the capsule */
+    max-width: 500px; /* Optional: Set max width for better control */
+    margin: 0 auto; /* Center the capsule within its container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
+    font-size: 3vw;
+    /* color: #333333;  */
+    /* margin-bottom: 40px; */
+}
+
+
+
+
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+    /* display: flex;
+    margin-left: 2px; */
+  }
+
+
+#purple{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #EDBFFF;
+    opacity: 0;
+    display: none;
+    transition: opacity ease 1s;
+    
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background: linear-gradient(135deg, #FF9933, #FFB84D 25%, #FFFFFF 40%, #128807 75%, #000080);
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size:cover ;
+    mix-blend-mode: difference;
+}
+.main{
+    background-color: #021424;
+    /* background-color: #97908d; */
+    /* background: url('https://images.unsplash.com/photo-1622798023168-76a8f3b1f24e?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; */
+    /* opacity: -2; */
+    cursor: none;
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 12vw;
+}
+
+
+#nav {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 102;
+}
+
+#nav img {
+    height: 27px;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#nav #circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#nav h4 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#nav a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+#nav a:hover {
+    color: #ff9933; /* Change to the desired hover color */
+}
+
+#nav a:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+
+.page1 h1{
+    font-size: 8vw;
+    font-weight: 300;
+    font-family: PP mori;
+
+    margin-left: 6vw;
+    transform-origin: left;
+}
+
+
+
+.page1 h2{
+    font-size: 8vw;
+    font-weight: 300;
+    transform-origin: left;
+
+    margin-left: 26vw;
+}
+
+.page1 video{
+    width: 60%;
+    margin-top: 10vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.page2{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 9;
+}
+
+.page2 h1{
+    font-size:7vw;
+    font-weight: 500;
+    color: #111;
+    line-height: 6.8vw;
+
+}
+.page2-container{
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 5vw; */
+}
+.page2-left{
+    /* background-color: blue; */
+    width: 40%;
+}
+.page2-right{
+    /* background-color: blue; */
+    width: 24%;
+}
+.page2-left h2{
+    font-size: 4vw;
+    font-weight: 300;
+    color: #111;
+    line-height: 4.6vw;
+}
+.page2-right p{
+    font-size: 28px;
+    color: #111;
+}
+.page2-right button{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 4px 0;
+    background: linear-gradient(to right, #FF9933, #FFD700, #138808);
+    color: #1B1B1B;
+    margin-top: 20px;
+}
+
+
+/* .page3 h1 {
+    font-size: 6.8vw;
+    font-weight: 300;
+    color: #111;
+    margin-left: 100px;
+}
+
+.page3 {
+    padding: 20px;
+} */
+
+.page3 h1 {
+    font-size: 6.8vw;
+    font-weight: 300;
+    color: #111;
+    margin-left: 100px;
+}
+
+.page3-part1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px; /* Add space between image containers */
+}
+
+.image-container {
+    text-align: center;
+    position: relative; /* Needed for the text color change effect */
+}
+
+.image-container img {
+    height: 400px; /* Default height for images */
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out; /* For hover effect */
+    margin-left: 1vw;
+}
+
+.image-container .img-2 {
+    margin-left: 16.5vw;
+    height: 700px; /* Specific height for second image */
+    margin-top: 300px;
+}
+
+/* Hover effect */
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image-container h2,
+.image-container p {
+    transition: color 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Smooth transition for color and opacity */
+    opacity: 0; /* Start with hidden text */
+}
+
+.image-container:hover h2,
+.image-container:hover p {
+    background: linear-gradient(to right, #FF9A9E, #FAD0C4, #FDCB82, #E2D1C3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    opacity: 1; /* Make text visible on hover */
+}
+
+.image-container h2 {
+    font-size: 3vw;
+    color: #100D0D;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 2vw;
+    font-weight: 700; /* Smooth transition for text color */
+}
+
+.image-container p {
+    font-size: 2rem;
+    color: #100D0D; /* Dark color for the paragraph text */
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    padding-left: 2vw;
+}
+
+/* Optional specific styles for .h2 and .p2 if needed */
+.image-container .h2 {
+    /* color: #00ffe5; */
+    margin-left: 15vw;
+    padding-top: 20px;
+    text-align: right;
+    padding-right: 2vw;
+    font-weight: 700;
+}
+
+.image-container .p2 {
+    /* color: #00ffe5; */
+    padding-right: 2vw;
+    text-align: right;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page3 h1 {
+        font-size: 8vw;
+        margin-left: 20px;
+    }
+
+    .page3-part1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page3-part1 img,
+    .page3-part1 .img-2 {
+        width: 90%;
+        height: auto;
+        margin-top: 40px;
+    }
+}
+
+/* .page3-part1 video{
+    height: 400px;
+    margin-top: 40px;
+} */
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+    position: relative;
+    padding: 170px 100px;
+}
+.elem{
+    /* background-color: salmon; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+}
+.elem img:nth-child(1){
+    left: 2%;
+}
+.elem img:nth-child(3){
+    right: 5%;
+}
+.text-div{
+    height: 16vh;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 7.5vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+}
+
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #EDBFFF;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}
+
+
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 140px 100px;
+}
+.page5 h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.box{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 2px solid #dadada;
+}
+
+.box:nth-last-child(1){
+    border-bottom: 2px solid #dadada;
+
+}
+
+
+/* Ensure the footer takes up full width and has proper spacing */
+footer {
+    background: linear-gradient(to right, #FF9933, #FFB84D, #FFFFFF, #138808);
+    color: white;
+    padding: 2rem 1rem; /* Padding for spacing */
+    position: relative;
+    min-height: 68vh; /* Minimum height to ensure visibility */
+    clear: both; /* Clear floated elements if any */
+    width: 100%; /* Full width */
+}
+
+/* Container for footer content */
+.container {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center container */
+    padding: 0 1rem; /* Padding for inner spacing */
+}
+
+/* Flexbox for footer sections */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between sections */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between; /* Distribute space between sections */
+    }
+
+    .footer-content .section {
+        flex: 1; /* Equal space for sections */
+    }
+}
+
+/* Ensure the image in the interactive map is properly displayed */
+.map-container {
+    position: relative;
+}
+
+.map-hover-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.map-container:hover .map-hover-info {
+    opacity: 1;
+}
+
+/* Ensure form elements are responsive */
+form input,
+form button {
+    width: 100%;
+}
+
+/* Specific button width */
+form button {
+    max-width: 150px; /* Adjust as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .map-container {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button */
+#chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbot Messages */
+.chatbot-messages {
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bot and user messages */
+.message {
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    color: #000;
+}
+
+.bot {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-start;
+}
+
+.user {
+    background-color: #f1f1f1;
+    align-self: flex-end;
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 500px;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button */
+#chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbot Messages */
+.chatbot-messages {
+    height: 500px;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bot and user messages */
+.message {
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    color: #000;
+}
+
+.bot {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-start;
+}
+
+.user {
+    background-color: #f1f1f1;
+    align-self: flex-end;
+}
+
+/* Chatbot Input */
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: white; /* Ensure input background is white */
+    color: #000; /* Set text color to black */
+}
+
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Chatbot Toggle Button */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Capsule shape */
+    width: 150px; /* Width of the capsule */
+    height: 50px; /* Height of the capsule */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; 
+    overflow: hidden;
+}
+
+/* Chatbot Emoji */
+.chatbot-emoji {
+    font-size: 24px;
+    margin-right: 5px;
+    margin-left: 5px; /* Margin between emoji and text */
+}
+
+/* Chatbot Text */
+.chatbot-text {
+    font-size: 16px;
+    white-space: nowrap;
+}
